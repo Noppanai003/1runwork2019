@@ -1,0 +1,90 @@
+<app-auth-content>
+    <!-- <div class="alert alert-dismissible alert-danger outer-top-xs" *ngIf="errorMessage && !successMessage"> -->
+    <div class="app-title">
+        <div>
+            <h1>
+                <i class="fa fa-user"></i> ข้อมูลส่วนตัว
+            </h1><br>
+            <p> หน้าแก้ไขข้อมูลส่วนตัว</p>
+        </div>
+        <ul class="app-breadcrumb breadcrumb">
+            <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+            <li class="breadcrumb-item">
+                <a href="#">ข้อมูลส่วนตัว</a></li>
+        </ul>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="tile">
+                <!-- ส่วนหัวของ panal -->
+                <div class="tile-title-w-btn">
+                    <h3 class="title">
+                        <i class="fa fa-edit"></i> แก้ไขข้อมูลส่วนตัว
+                    </h3>
+                    <p>
+                        <button type="button" class="btn btn-primary icon-btn">
+                            <i class="fa fa-key"></i>เปลี่ยนรหัสผ่าน
+                        </button>
+                    </p>
+                </div>
+
+                <!-- ส่วนฟอร์ม -->
+                <div class="tile-body">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <img src="assets/images/no-image-profile.png" class="img-fluid img-thumbnail">
+                                </div>
+                                <div class="form-group">
+                                    <input type="file">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+
+                                <div class="from-group">
+                                    <label for="">อีเมล์</label>
+                                    <input type="text" class="form-control" disabled>
+                                </div><br>
+
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="from-group">
+                                            <label for="">ชื่อ</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="from-group">
+                                            <label for="">นามสกุล</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div><br>
+
+                                <div class="from-group">
+                                    <label for="">ตำแหน่ง</label>
+                                    <select class="form-control">
+                                        <option value="">เลือกตำแหน่งงาน</option>
+                                        <option *ngFor="let item of positionItems" [value]="item">
+                                            {{ item }}
+                                        </option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <hr>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fa fa-save"></i> บันทึกข้อมูลโปรไฟล์
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</app-auth-content>
